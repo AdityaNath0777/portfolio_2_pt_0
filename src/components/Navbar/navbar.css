@@ -1,0 +1,4 @@
+.activeLink {
+  color: whitesmoke;
+  filter: drop-shadow(2px, 4px, 6px, rgb(246, 241, 241));
+}
