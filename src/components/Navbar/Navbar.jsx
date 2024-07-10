@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { Bio, navLinks } from "../../constants";
 import "./navbar.css";
 
 const Navbar = () => {
-  const handleNavClick = (e) => {
-    const navList = Array.from(document.getElementsByClassName("nav-link"));
+  const [activeLink, setActiveLink] = useState("");
 
-    navList.forEach((nav) => {
-      nav.classList.remove("activeLink");
-    });
-
-    e.target.parentElement.classList.add("activeLink");
+  const handleNavClick = (navID) => {
+    setActiveLink(navID);
   };
   return (
     <div id="navbar" className="navbar py-4">
@@ -23,10 +19,14 @@ const Navbar = () => {
           </div>
           <ul className="nav-links-container ml-auto flex w-3/6 justify-end items-center gap-2">
             {navLinks.map((nav) => (
-              <li className="nav-link text-xl text-gray-400 font-semibold">
-                <NavLink to={nav.id} onClick={(e) => handleNavClick(e)}>
-                  {nav.title}
-                </NavLink>
+              <li
+                key={nav.id}
+                className={`nav-link text-xl text-gray-400 font-semibold ${
+                  activeLink === nav.id ? "activeLink" : ""
+                }`}
+                onClick={() => handleNavClick(nav.id)}
+              >
+                <NavLink to={nav.id}>{nav.title}</NavLink>
               </li>
             ))}
           </ul>
