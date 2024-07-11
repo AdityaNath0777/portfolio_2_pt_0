@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+// import { BrowserRouter as Router } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import { Bio, navLinks } from "../../constants";
 import "./navbar.css";
@@ -11,10 +11,13 @@ const Navbar = () => {
     setActiveLink(navID);
   };
   return (
-    <div id="navbar" className="navbar py-4">
-      <Router>
-        <nav className="flex justify-between items-center">
-          <div className="my-name-nav-container text-2xl font-bold">
+    <div
+      id="navbar"
+      className="navbar w-full flex justify-between items-center top-0 h-20 fixed p-4"
+    >
+      {/* <Router> */}
+        <nav className="w-full flex justify-between items-center">
+          <div className="my-name-nav-container text-slate-100 text-2xl font-bold">
             {`${Bio.firstName} ${Bio.lastName}`}
           </div>
           <ul className="nav-links-container ml-auto flex w-3/6 justify-end items-center gap-2">
@@ -26,12 +29,19 @@ const Navbar = () => {
                 }`}
                 onClick={() => handleNavClick(nav.id)}
               >
-                <NavLink to={nav.id}>{nav.title}</NavLink>
+                <NavLink
+                  to={`#${nav.id}`}
+                  scroll={(el) =>
+                    el.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }
+                >
+                  {nav.title}
+                </NavLink>
               </li>
             ))}
           </ul>
         </nav>
-      </Router>
+      {/* </Router> */}
     </div>
   );
 };

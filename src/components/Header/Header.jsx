@@ -1,11 +1,11 @@
 import React from "react";
 import { Navbar, About } from "../index";
 
-const Header = () => {
+const Header = ({setRenderResume}) => {
   return (
     <header>
       <Navbar />
-      <About />
+      <About setRenderResume = {setRenderResume} />
     </header>
   );
 };

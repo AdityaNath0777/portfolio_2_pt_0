@@ -1,23 +1,29 @@
 import { useState } from "react";
 import "./App.css";
-import { Contact, Footer, Header, Projects, Skills, Work } from "./components/index";
+import {
+  Route,
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Outlet,
+} from "react-router-dom";
+import Resume from "./Resume/Resume";
+import Portfolio from "./Portfolio";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [renderResume, setRenderResume] = useState(false);
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Outlet />}>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="*" element={<div>Not Found</div>} />
+      </Route>
+    )
+  );
   return (
-    <div className="w-full min-h-screen">
-      <div className="w-4/5 mx-auto py-4">
-        {/* <Navbar /> */}
-        <Header />
-        <main>
-          <Work />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+    <div className="w-full text-center min-h-screen">
+      <RouterProvider router={router} />
     </div>
   );
 }
