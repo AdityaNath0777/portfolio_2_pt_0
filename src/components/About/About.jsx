@@ -1,27 +1,48 @@
-import React from 'react'
-import { Button } from "../index"
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Button } from "../index";
+import { Link } from "react-router-dom";
+import { Bio } from "../../constants";
+import { myPic } from "../../assets";
+import { NavHashLink } from "react-router-hash-link";
 
 const About = () => {
   return (
-    <div id='about'>
-    <h1 className='pt-20' style={{fontSize: "2rem", fontWeight: "500"}}>About</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore consequatur optio ut?</p>
+    <section id="about" className="min-h-screen">
+      <div className="about-container w-full grid grid-cols-2 gap-2 place-items-center justify-items-center px-4">
+        <div className="about-left w-full">
+          <h1
+            className="pt-20 text-wrap"
+            style={{ fontSize: "3rem", fontWeight: "800" }}
+          >
+            NAMASTE,
+            <br />
+            I'M {`${Bio.firstName.toUpperCase()} ${Bio.lastName.toUpperCase()}`}
+          </h1>
+          <h2 className="text-xl text-sky-600 font-bold">{Bio.roles[0]}</h2>
+          <p className="about-desc text-slate-600 text-md font-semibold">
+            {Bio.description}
+          </p>
 
-      <Button 
-        // onClick = {(e) => handleResume(e)}
-       >
-        <Link to={'resume'} >My Resum&eacute;</Link>
-       </Button>
-    </div>
-  )
-}
+          <div className="btn-container mt-14 grid grid-cols-2 gap-4">
+            <Link to={"resume"} className="">
+              <Button className="w-full h-20">My Resum&eacute;</Button>
+            </Link>
+            <NavHashLink to={"#contact"} className="s">
+              <Button className="w-full h-20">Say Hello!</Button>
+            </NavHashLink>
+          </div>
+        </div>
 
-export default About
+        <div className="about-right w-full">
+          <img
+            src={myPic}
+            alt="my picture"
+            style={{ width: "70%", marginLeft: "auto" }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;

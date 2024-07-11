@@ -20,7 +20,7 @@ function App() {
     )
   );
   return (
-    <div className="w-full text-center min-h-screen">
+    <div className="w-full min-h-screen">
       <RouterProvider router={router} />
     </div>
   );
