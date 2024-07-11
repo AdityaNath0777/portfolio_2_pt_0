@@ -13,18 +13,22 @@ const Navbar = () => {
   return (
     <div
       id="navbar"
-      className="navbar w-full flex justify-between items-center top-0 h-20 fixed p-4"
+      className="navbar w-1/5 top-0 bottom-0 min-h-screen fixed p-4"
     >
-      {/* <Router> */}
-        <nav className="w-full flex justify-between items-center">
-          <div className="my-name-nav-container text-slate-100 text-2xl font-bold">
+        <nav className="w-full h-full flex flex-col justify-between items-center py-2">
+          <div className="my-name-nav-container text-slate-100 text-2xl font-bold pt-7">
+          <NavLink 
+          to='#about' 
+          scroll={(el) => el.scrollIntoView({behavior: "smooth", block: "start"})}
+           >
             {`${Bio.firstName} ${Bio.lastName}`}
+          </NavLink>
           </div>
-          <ul className="nav-links-container ml-auto flex w-3/6 justify-end items-center gap-2">
+          <ul className="nav-links-container flex flex-col justify-center items-center gap-2">
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`nav-link text-xl text-gray-400 font-semibold ${
+                className={`nav-link text-xl p-4 m-4 text-gray-400 font-semibold ${
                   activeLink === nav.id ? "activeLink" : ""
                 }`}
                 onClick={() => handleNavClick(nav.id)}
@@ -41,7 +45,6 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-      {/* </Router> */}
     </div>
   );
 };

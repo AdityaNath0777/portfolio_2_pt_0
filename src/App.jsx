@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import {
   Route,
@@ -11,7 +10,6 @@ import Resume from "./Resume/Resume";
 import Portfolio from "./Portfolio";
 
 function App() {
-  const [renderResume, setRenderResume] = useState(false);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Outlet />}>

@@ -4,7 +4,7 @@ import { Navbar, About } from "../index";
 const Header = ({setRenderResume}) => {
   return (
     <header>
-      <Navbar />
+      {/* <Navbar /> */}
       <About setRenderResume = {setRenderResume} />
     </header>
   );
