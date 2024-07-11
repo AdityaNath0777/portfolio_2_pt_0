@@ -22,11 +22,12 @@
 }
 #resume h2 {
   font-size: 1.5em;
-  padding-bottom: 1em;
+  padding: 1em auto;
 }
 #resume h3 {
   font-size: 1em;
-  padding-bottom: 1em;
+  padding: 1em auto;
+  /* padding-bottom: 1em; */
 }
 #resume main {
   display: grid;
@@ -51,10 +52,7 @@
   background-color: lightgray;
   height: 1px;
 }
-#resume h2,
-#resume h3 {
-  font-weight: 400;
-}
+
 #resume #main-left {
   border-right: 1px solid lightgray;
 }

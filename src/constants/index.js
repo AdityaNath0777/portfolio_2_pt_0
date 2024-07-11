@@ -28,8 +28,8 @@ const Bio = {
   state: "Delhi",
   country: "India",
   resume: "", // will upload google word and paste the link
-  github: "https://github.com/AdityaNath0777/",
-  linkedin: "https://linkedin.com/in/aditya-mishra-0777am",
+  github: "AdityaNath0777",
+  linkedin: "aditya-mishra-0777am",
   mail: "adityanath0777@gmail.com",
   insta: "", // will make another one
   twitter: "", // new twitter on the way
@@ -37,7 +37,7 @@ const Bio = {
 
 const experience = [
   {
-    role: "Vice Chaiperson BVP-ISTE",
+    role: "Vice Chaiperson",
     duration: {
       start: "May 2024",
       end: "present",
@@ -51,6 +51,7 @@ const experience = [
       "Git",
       "Leadership",
     ],
+    company: "BVP-ISTE",
     desc: "commited to manage the college society. oragnize valuable events",
   },
   {
@@ -65,10 +66,11 @@ const experience = [
       "stable diffusion",
       "text-to-image generation",
     ],
+    company: "BVCOE, New Delhi",
     desc: "Conducted research on various text-to-image generation models, exploring their potential impact and applications across different fields.",
   },
   {
-    role: "Tech Head at NIDUS BVP",
+    role: "Tech Head",
     duration: {
       start: "Oct 2023",
       end: "May 2024",
@@ -82,10 +84,11 @@ const experience = [
       "Git",
       "Leadership",
     ],
+    company: "NIDUS BVP",
     desc: "Led a 6-member team to develop a responsive website for the college society.",
   },
   {
-    role: "Softech Head at BVP-ISTE",
+    role: "Softech Head",
     duration: {
       start: "Oct 2023",
       end: "May 2024",
@@ -101,6 +104,7 @@ const experience = [
       "Git",
       "Leadership",
     ],
+    company: "BVP-ISTE",
     desc: "Successfully organized a 5-day online AI/ML Bootcamp with a team of 8. Developed and led the team for a website for the hackathon Hack The Crisis 3.0 oraganized by BVP-ISTE",
   },
 ];
@@ -129,6 +133,14 @@ const skills = [
   {
     name: "Bootstrap",
     img: "",
+  },
+  {
+    name: "git",
+    img: ""
+  },
+  {
+    name: "github",
+    img: ""
   },
   {
     name: "C/C++",
@@ -212,4 +224,59 @@ const myProjects = [
   },
 ];
 
-export { navLinks, Bio, experience, skills, myProjects };
+const top3WebDevProjects = [
+  {
+    name: "Redux Toolkit Todo",
+    duration: {
+      start: "July, 2024",
+      end: "July, 2024",
+    },
+    tags: ["React JS", "Vite", "redux", "redux-toolkit", "tailwind CSS"],
+    desc: "Developed a to-do web app using Vite and ReactJS, leveraging Redux Toolkit for state management. The web app allows users to add, remove, and update tasks efficiently.",
+  },
+  {
+    name: "Todo Context Local",
+    duration: {
+      start: "Feb 2024",
+      end: "Feb 2024",
+    },
+    tags: ["React Js", "Vite", "Tailwind CSS"],
+    desc: "Built a React Todo app with the context API and client-side local storage persistence using the Vite framework.",
+  },
+  {
+    name: "MedUnited",
+    duration: {
+      start: "July 2023",
+      end: "July 2023",
+    },
+    tags: ["HTML", "CSS", "JavaScript", "tailwind CSS", "fetch API"],
+    desc: "Developed MedUnited: a healthcare platform prototype with real-time hospital searches, facility data display, and an integrated online medicine shop, enhancing accessibility and convenience for users.",
+  },  
+]
+
+const education = [
+  {
+    courseName: "Bachelor of Technology",
+    branch: "Electronics and Communication Enginnering",
+    courseAbbr: "B. Tech",
+    branchAbbr: "ECE",
+    duration: {
+      start: "Dec, 2021",
+      end: "Jun, 2025",
+      expectedEnd: true,
+    },
+    institute: "Bharati Vidyapeeth's College of Engineering, New Delhi",
+  },
+  {
+    courseName: "Sr. Secondary (10+2)",
+    branch: "Science (PCM)",
+    duration: {
+      start: "Dec, 2021",
+      end: "Jun, 2025",
+      expectedEnd: false,
+    },
+    institute: "GD Lancer's Public School, New Delhi",
+  },
+];
+
+export { navLinks, Bio, experience, skills, myProjects, education, top3WebDevProjects };

@@ -1,23 +1,30 @@
-import React from 'react'
+import React from "react";
+import { experience } from "../../constants/index";
 
 const ResumeWork = () => {
   return (
     <section id="work-section">
-    <h2>WORK EXPERIENCE</h2>
-    <h3>JOB TITLE</h3>
-    <p>Company Name | 2008-2010</p>
-    <p>
-      Describe what you didin this position with one summary sentence and
-      no more than 3 bullet points
-    </p>
-    <ul>
-      <li>Cool accomplishment</li>
-      <li>Cool accomplishment</li>
-      <li>Cool accomplishment</li>
-      -
-    </ul>
-  </section>
-  )
-}
+      <h2>WORK EXPERIENCE</h2>
 
-export default ResumeWork
+      {experience.map((exp) => (
+        <div className="work-exp mb-4">
+          <div className="grid grid-cols-2 gap-1 m-0">
+            <h3 className="text-left font-semibold">{exp.role}</h3>
+            <p className="text-left grid grid-cols-2 gap-1">
+              <span className="border-r pr-1 border-r-black text-right">{`${exp.company}`}</span>
+              <span>{`${exp.duration.start} - ${exp.duration.end}`}</span>
+            </p>
+          </div>
+          <p className="text-justify m-0">{exp.desc}</p>
+          {/* <ul className="flex justify-center items-center gap-2">
+            {exp.skills.map((skill) => (
+              <li>{skill}</li>
+            ))}
+          </ul> */}
+        </div>
+      ))}
+    </section>
+  );
+};
+
+export default ResumeWork;
