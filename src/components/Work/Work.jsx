@@ -7,7 +7,7 @@ const Work = () => {
       <h2 className="text-4xl  text-slate-900 font-bold m-2 py-10">WORK</h2>
       <div className="work-container grid grid-cols-2 gap-4 ">
         {experience.map((exp) => (
-          <div className="work-item border-2 border-sky-600 rounded-lg px-4 py-6 m-2">
+          <div data-aos="fade-up" dos-aos-duration="1000" className="work-item border-2 border-sky-600 rounded-lg px-4 py-6 m-2">
             <div className="work-top mb-4">
               <h3 className="text-center text-xl text-slate-800 font-bold">
                 {exp.role}

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./contact.css";
-import { Bio } from "../../constants";
 import Button from "../Button";
 import { myPic } from "../../assets";
-
+import "aos/dist/aos.css";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -51,7 +50,7 @@ const Contact = () => {
     let isValid = !(error.name || error.email || error.message);
     if (isValid) {
       const validatedData = { ...formData };
-      setContactData((prev) => ([...prev, validatedData]));
+      setContactData((prev) => [...prev, validatedData]);
     } else {
       alert("Please Enter valid inputs");
     }
@@ -59,8 +58,8 @@ const Contact = () => {
     setFormData({
       name: "",
       email: "",
-      message: ""
-    })
+      message: "",
+    });
   };
 
   const handleInputChange = (e) => {
@@ -73,11 +72,13 @@ const Contact = () => {
     <section id="contact" className="min-h-screen px-6">
       <h2 className="text-4xl font-bold text-slate-900 py-10">Contact</h2>
       <div className="contact-container">
-        <div className="w-full">
+        <div data-aos="zoom-out" data-aos-duration="1000" className="w-full">
           <img src={myPic} alt="contact img" className="w-3/5 mx-auto" />
         </div>
         <form
           onSubmit={handleContactSumit}
+          data-aos="zoom-out"
+          data-aos-duration="1000"
           className="grid grid-cols-1 gap-4 w-11/12  mx-auto contact-form"
         >
           <input

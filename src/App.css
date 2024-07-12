@@ -1,0 +1,9 @@
+.main-app {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.right-app {
+  max-width: 80vw;
+  overflow-x: hidden;
+}

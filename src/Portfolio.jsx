@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Contact,
   Footer,
@@ -8,13 +8,19 @@ import {
   Skills,
   Work,
 } from "./components/index";
+import Aos from "aos";  
+import 'aos/dist/aos.css';
+
 const Portfolio = ({ setRenderResume }) => {
+  useEffect(() => {
+    Aos.init()
+  }, [])
   return (
-    <div className="w-full">
-      <div className="w-1/5 mr-auto left-app">
+    <div className="w-full main-app">
+      <div className="left-app">
         <Navbar />
       </div>
-      <div className="w-4/5 ml-auto right-app">
+      <div className="right-app">
         <Header setRenderResume={setRenderResume} />
         <main>
           <Work />

@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "../index";
 import { Link } from "react-router-dom";
 import { Bio } from "../../constants";
 import { myPic } from "../../assets";
 import { NavHashLink } from "react-router-hash-link";
 import "./about.css";
+import 'aos/dist/aos.css';
 
 const About = () => {
   return (
     <section id="about" className="min-h-screen">
       <div className="about-container w-full grid grid-cols-2 gap-2 place-items-center justify-items-center px-4">
-        <div className="about-left w-full">
+        <div className="about-left w-full"   data-aos='fade-right' data-aos-duration='1000' >
           <h1
             className="pt-20 text-wrap font-extrabold text-slate-100"
             style={{ fontSize: "3rem" }}
@@ -53,7 +54,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="about-right w-full">
+        <div className="about-right w-full" data-aos='fade-left' data-aos-duration='1000'>
           <img
             src={myPic}
             alt="my picture"
