@@ -17,10 +17,10 @@ const Work = () => {
                 <span>{`${exp.duration.start} - ${exp.duration.end}`}</span>
               </p>
             </div>
-            <p className="text-justify text-slate-500 my-2">{exp.desc}</p>
+            <p className="work-desc text-justify text-slate-500 my-2">{exp.desc}</p>
             <p className="exp-skills flex text-slate-700  flex-wrap gap-2 mt-2">
               {exp.skills.map((skill) => (
-                <span className="hover:text-sky-500 hover:-translate-y-1 hover:cursor-pointer transition-all duration-200 " >{skill}</span>
+                <span className="exp-skll-item hover:text-sky-500 hover:-translate-y-1 hover:cursor-pointer transition-all duration-200 " >{skill}</span>
               ))}
             </p>
           </div>

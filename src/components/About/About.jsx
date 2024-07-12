@@ -13,17 +13,16 @@ const About = () => {
       <div className="about-container w-full grid grid-cols-2 gap-2 place-items-center justify-items-center p-4">
         <div className="about-left w-full"   data-aos='fade-right' data-aos-duration='1000' >
           <h1
-            className="pt-20 text-wrap font-extrabold text-slate-100"
-            style={{ fontSize: "3rem" }}
+            className="about-heading pt-20 text-wrap font-extrabold text-slate-100"
           >
             NAMASTE,
             <br />
             I'M {`${Bio.firstName.toUpperCase()} ${Bio.lastName.toUpperCase()}`}
           </h1>
-          <h2 className="text-4xl text-sky-500 font-bold my-3">
+          <h2 className="about-role text-sky-500 font-bold my-3">
             {Bio.roles[0]}
           </h2>
-          <p className="about-desc mt-8 text-slate-500 text-md font-semibold">
+          <p className="about-desc mt-8 text-slate-500 text-base font-semibold">
             {Bio.description}
           </p>
 
@@ -58,6 +57,7 @@ const About = () => {
           <img
             src={myPic}
             alt="my picture"
+            className="pr-4"
             style={{ width: "70%", marginLeft: "auto" }}
           />
         </div>

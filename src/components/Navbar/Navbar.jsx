@@ -13,12 +13,13 @@ const Navbar = () => {
   return (
     <div
       id="navbar"
-      className="navbar w-1/5 top-0 bottom-0 min-h-screen fixed p-4"
+      className="navbar top-0 bottom-0 min-h-screen fixed p-4"
     >
         <nav className="w-full h-full flex flex-col justify-between items-center py-2">
           <div className="my-name-nav-container text-slate-100 text-2xl font-bold pt-7">
           <NavLink 
-          to='#about' 
+          to='#about'
+          className={'nav-name text-center'}
           scroll={(el) => el.scrollIntoView({behavior: "smooth", block: "start"})}
            >
             {`${Bio.firstName} ${Bio.lastName}`}
