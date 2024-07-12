@@ -26,16 +26,17 @@ const About = () => {
           <div className="btn-container mt-14 grid grid-cols-2 gap-4">
             <Link to={"resume"} className="">
               <Button
-                className="w-full rounded-tl-3xl rounded-br-3xl h-20 "
+                className="w-full font-semibold rounded-tl-3xl rounded-br-3xl h-20 "
                 bgColor="bg-sky-500 "
               >
                 My Resum&eacute;
               </Button>
             </Link>
-            <NavHashLink to={"#contact"} className="s">
+            <NavHashLink to={"#contact"} className="">
               <Button
-                className="w-full border-4 border-sky-500 text-sky-500 rounded-tl-3xl rounded-br-3xl h-20 "
+                className="w-full border-4 font-semibold border-sky-500 rounded-tl-3xl rounded-br-3xl h-20 "
                 bgColor="bg-slate-100"
+                textColor="text-sky-500 "
               >
                 Say Hello!
               </Button>
