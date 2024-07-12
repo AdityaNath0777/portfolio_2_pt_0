@@ -170,3 +170,10 @@
     margin-bottom: 0.2rem !important;
   }
 }
+
+/* CONTACT CSS */
+.contact-container {
+  /* grid-template-columns: auto !important; */
+  display: flex!important;
+  flex-direction: column-reverse;
+}
