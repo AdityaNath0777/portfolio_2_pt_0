@@ -119,13 +119,14 @@
   }
 
   .about-heading {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    padding-top: 1rem !important;
   }
   .about-role {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
   .about-desc {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .about-container {
@@ -144,5 +145,28 @@
   .work-desc,
   .exp-skll-item {
     font-size: 0.9rem !important;
+  }
+}
+
+@media not all and (min-width: 550px) {
+  .work-container {
+    grid-template-columns: auto !important;
+  }
+}
+
+
+/* SKILLS CSS */
+@media not all and (min-width: 550px) {
+  .skills-list {
+    gap: 0.5rem !important;
+  }
+  .skill-item {
+    font-size: 1rem !important;
+    padding-top: 0.2rem !important;
+    padding-bottom: 0.2rem !important;
+    padding-left:0.3rem !important;
+    padding-right:0.3rem !important;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.2rem !important;
   }
 }
