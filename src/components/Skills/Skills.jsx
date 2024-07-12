@@ -1,6 +1,7 @@
 import React from "react";
 import { skills } from "../../constants";
 import 'aos/dist/aos.css'
+import './skills.css'
 
 const Skills = () => {
   return (

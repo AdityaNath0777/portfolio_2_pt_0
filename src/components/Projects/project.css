@@ -16,6 +16,11 @@
   color: white
 }
 
+.prj-item {
+  display: grid;
+  grid-template-rows: 25% 50% 25%;
+}
+
 .prj-item p{
   color: rgb(207, 213, 220);
 }
