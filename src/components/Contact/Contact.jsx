@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./contact.css";
 import { Bio } from "../../constants";
 import Button from "../Button";
+import { myPic } from "../../assets";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +20,12 @@ const Contact = () => {
     <section id="contact" className="min-h-screen px-6">
       <h2 className="text-4xl font-bold text-slate-900 py-10">Contact</h2>
       <div className="contact-container">
-        <span>left cell</span>
+        <div className="w-full">
+          <img src={myPic} alt="contact img" className="w-3/5 mx-auto" />
+        </div>
         <form
           onSubmit={handleContactSumit}
-          className="grid grid-cols-1 gap-4 w-4/5 mx-auto contact-form"
+          className="grid grid-cols-1 gap-4 w-11/12  mx-auto contact-form"
         >
           <input
             type="text"
@@ -36,15 +39,14 @@ const Contact = () => {
             id="contact-form-mail"
             placeholder="Enter Your Email"
           />
-            {/* className="h-72  text-wrap" */}
+          {/* className="h-72  text-wrap" */}
           <textarea
             type="textarea"
             rows={10}
-            cols={40}
-            defaultValue="I really liked your portfolio!"
             name="message"
             id="contact-form-msg"
             placeholder="Enter Your Message"
+            className="resize-none"
           />
           {/* <div className="submit-contact-btn-container w-full"> */}
           <Button
