@@ -1,0 +1,13 @@
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:1rem;
+  justify-items: center;
+  place-items: center;
+}
+
+.contact-form input, .contact-form textarea {
+  border: 2px solid deepskyblue;
+  border-radius: 10px;
+  padding: 1rem;
+} 
