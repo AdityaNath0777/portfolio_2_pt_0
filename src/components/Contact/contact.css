@@ -11,6 +11,7 @@
   border-radius: 10px;
   padding: 1rem;
   outline-color: rgb(9, 74, 95);
+  color: rgb(18, 154, 199);
 }
 .contact-form input:focus, .contact-form textarea:focus {
   border-color: deepskyblue ;

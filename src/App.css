@@ -1,0 +1,148 @@
+.main-app {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.right-app {
+  max-width: 80vw;
+  overflow-x: hidden;
+}
+
+/* PORTFOLIO CSS */
+@media (max-width: 1040px) {
+  .main-app {
+    grid-template-columns: 25% 75%;
+  }
+}
+@media not all and (min-width: 800px){
+  .main-app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .right-app {
+    min-width: 100vw;
+  }
+}
+
+/* ABOUT CSS */
+.about-heading {
+  font-size: 3rem;
+}
+
+.about-role {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+@media (max-width: 1040px) {
+  .about-container {
+    grid-template-columns: 60% 40% !important;
+  }
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-role {
+    font-size: 2rem;
+  }
+
+  .about-desc {
+    font-size: 0.9rem !important;
+  }
+
+  .about-contact-btn,
+  .about-resume-btn {
+    height: 4rem !important;
+  }
+}
+
+/* NAVBAR CSS */
+.navbar {
+  width: 20%;
+}
+
+@media (max-width: 1040px) {
+  .navbar {
+    width: 25%;
+  }
+}
+
+@media not all and (min-width: 800px){
+  .navbar {
+    width: 100%;
+    top: auto !important;
+    bottom: 0;
+    height: 5rem;
+    min-height: 5rem !important;
+    z-index: 150;
+    padding: 0.5rem !important;
+  }
+  nav {
+    flex-direction: row !important;
+    height: max-content !important;
+    padding: 0;
+  }
+  .nav-links-container {
+    flex-direction: row !important;
+  }
+  .nav-link {
+    padding: 0.5rem !important;
+    margin: 0.5rem !important;
+    font-size: 0.9rem !important;
+
+  }
+
+  .my-name-nav-container {
+    padding-top: 0 !important;
+  }
+}
+
+@media not all and (min-width: 550px) {
+  .my-name-nav-container {
+    /* font-size: 0.5rem !important; */
+    display: none;
+  }
+
+  nav {
+    /* justify-content: center; */
+    width: 100%;
+  }
+
+  .nav-links-container {
+    width: 100%;
+  }
+  .nav-link {
+    padding: 0!important;
+    margin: auto 0.2rem!important;
+  }
+
+  .about-heading {
+    font-size: 1.2rem;
+  }
+  .about-role {
+    font-size: 1rem;
+  }
+  .about-desc {
+    font-size: 0.8rem;
+  }
+
+  .about-container {
+    grid-template-columns: auto !important;
+  }
+
+  .about-container img {
+    margin: 1rem auto !important;
+    width: 60% !important;
+
+  }
+}
+
+/* WORK CSS */
+@media (max-width: 1040px) {
+  .work-desc,
+  .exp-skll-item {
+    font-size: 0.9rem !important;
+  }
+}
