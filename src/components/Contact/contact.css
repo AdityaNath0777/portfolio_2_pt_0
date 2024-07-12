@@ -7,12 +7,15 @@
 }
 
 .contact-form input, .contact-form textarea {
-  border: 3px solid rgb(15, 122, 157);
+  border: 3px solid lightgrey;
   border-radius: 10px;
   padding: 1rem;
   outline-color: rgb(9, 74, 95);
 }
 .contact-form input:focus, .contact-form textarea:focus {
-  border-color: skyblue ;
-  outline-color: skyblue ;
+  border-color: deepskyblue ;
+  outline-color: deepskyblue ;
+}
+.contact-form input:focus::placeholder, .contact-form textarea:focus::placeholder {
+  color: deepskyblue
 }
