@@ -1,21 +1,35 @@
-import React from 'react'
+import React from "react";
+import { myProjects } from "../../constants";
+import "./project.css"
 
 const Projects = () => {
   return (
-    <section className="projects min-h-screen" id='projects'>
-      <h1 style={{fontSize: "2rem", fontWeight: "500"}}>Projects</h1>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
-      <p>Projects</p>
+    <section id="projects" className="min-h-screen w-full px-4 mb-20">
+      <h2 className="text-4xl  text-slate-900 font-bold m-2 py-10">PROJECTS</h2>
+      <div className="prj-container ">
+        {myProjects.map((prj) => (
+          <div className="prj-item border-2 h-full border-sky-600 rounded-lg px-4 py-6 m-2">
+            <div className="prj-top mb-4 grid grid-cols-2 place-items-center justify-items-center gap-4">
+              <h3 className="text-left  w-full text-xl text-slate-800 font-bold">
+                {prj.name}
+              </h3>
+              <p className="text-right w-full  text-slate-700 font-semibold ">
+                <span>{`${prj.duration.start} - ${prj.duration.end}`}</span>
+              </p>
+            </div>
+            <p className="text-justify text-slate-500 my-2">{prj.desc}</p>
+            <p className="prj-skills flex text-slate-700  flex-wrap gap-2 mt-2">
+              {prj.tags.map((tag) => (
+                <span className="hover:text-sky-500 hover:-translate-y-1 hover:cursor-pointer transition-all duration-200 ">
+                  {tag}
+                </span>
+              ))}
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
