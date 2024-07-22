@@ -14,7 +14,7 @@
     grid-template-columns: 25% 75%;
   }
 }
-@media not all and (min-width: 800px){
+@media not all and (min-width: 800px) {
   .main-app {
     position: relative;
     display: flex;
@@ -69,7 +69,7 @@
   }
 }
 
-@media not all and (min-width: 800px){
+@media not all and (min-width: 800px) {
   .navbar {
     width: 100%;
     top: auto !important;
@@ -91,7 +91,6 @@
     padding: 0.5rem !important;
     margin: 0.5rem !important;
     font-size: 0.9rem !important;
-
   }
 
   .my-name-nav-container {
@@ -114,8 +113,8 @@
     width: 100%;
   }
   .nav-link {
-    padding: 0!important;
-    margin: auto 0.2rem!important;
+    padding: 0 !important;
+    margin: auto 0.2rem !important;
   }
 
   .about-heading {
@@ -136,7 +135,6 @@
   .about-container img {
     margin: 1rem auto !important;
     width: 60% !important;
-
   }
 }
 
@@ -154,7 +152,6 @@
   }
 }
 
-
 /* SKILLS CSS */
 @media not all and (min-width: 550px) {
   .skills-list {
@@ -164,16 +161,18 @@
     font-size: 1rem !important;
     padding-top: 0.2rem !important;
     padding-bottom: 0.2rem !important;
-    padding-left:0.3rem !important;
-    padding-right:0.3rem !important;
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
     margin-top: 0.2rem !important;
     margin-bottom: 0.2rem !important;
   }
 }
 
 /* CONTACT CSS */
-.contact-container {
-  /* grid-template-columns: auto !important; */
-  display: flex!important;
-  flex-direction: column-reverse;
+@media not all and (min-width: 800px) {
+  .contact-container {
+    /* grid-template-columns: auto !important; */
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
 }
