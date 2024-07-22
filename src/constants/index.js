@@ -36,7 +36,7 @@ const Bio = {
   linkedin: "aditya-mishra-0777am",
   mail: "adityanath0777@gmail.com",
   insta: "", // will make another one
-  twitter: "https://x.com/AdityaNath0777", // new twitter A/C has been created 🗿
+  twitter: "AdityaNath0777", // new twitter A/C has been created 🗿
 };
 
 const experience = [

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button } from "../index";
+import { Button, SocialLinks } from "../index";
 import { Link } from "react-router-dom";
 import { Bio } from "../../constants";
 import { myPic } from "../../assets";
@@ -51,6 +51,12 @@ const About = () => {
               </Button>
             </NavHashLink>
           </div>
+
+          <div className="mt-10 px-6">
+            <SocialLinks prop = {Bio} />
+          </div>
+
+
         </div>
 
         <div className="about-right w-full" data-aos='fade-left' data-aos-duration='1000'>

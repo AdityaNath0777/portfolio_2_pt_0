@@ -69,12 +69,16 @@ const Contact = () => {
     });
   };
 
-
   return (
     <section id="contact" className="min-h-screen px-6">
       <h2 className="text-4xl font-bold text-slate-900 py-10">CONTACT</h2>
       <div className="contact-container">
-        <div data-aos="zoom-out" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" className="w-full">
+        <div
+          data-aos="zoom-out"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1000"
+          className="w-full"
+        >
           <img src={myPic} alt="contact img" className="w-3/5 mx-auto" />
         </div>
         <form
