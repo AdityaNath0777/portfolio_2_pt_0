@@ -69,14 +69,6 @@ const Contact = () => {
     });
   };
 
-  const [aosOnce, setAosOnce] = useState("false")
-
-  // useEffect(() => {
-  //   Aos.init({
-  //     once: false,
-  //     duration: 1000
-  //   })
-  // }, []);
 
   return (
     <section id="contact" className="min-h-screen px-6">
