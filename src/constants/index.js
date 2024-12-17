@@ -24,9 +24,9 @@ const navLinks = [
 const Bio = {
   firstName: "Aditya",
   lastName: "Mishra",
-  roles: ["Front-End Developer", "AI/ML Engineer", "Programmer"],
+  roles: ["Full-Stack Web Developer","Front-End Developer", "AI/ML Engineer", "Programmer"],
   description:
-    "I am a front-end developer with expertise in HTML, CSS, JavaScript, and ReactJS, focused on creating visually appealing and user-friendly interfaces. Currently, I am also exploring AI/ML technologies, with plans to integrate them into web development in the future. I have hands-on experience with Arduino and a proven track record in event organization, demonstrating strong teamwork and leadership skills.",
+  "I am a Full-Stack Developer with expertise in HTML, CSS, JavaScript, ReactJS, Next.js, Node.js, Express.js, and MongoDB, focused on building responsive and user-friendly web applications. Exploring AI/ML to integrate into future web solutions. Experienced with Arduino and event organization, showcasing strong teamwork and leadership skills.",
   tagLine: "Let's create something useful in a better way",
   city: "New Delhi",
   state: "Delhi",
@@ -56,41 +56,23 @@ const experience = [
       "Leadership",
     ],
     company: "BVP-ISTE",
-    desc: "commited to manage the college society. oragnize valuable events",
+    desc: "Leading a college society of 100+ members, organize valuable events to enhance participants tech and soft skills.",
   },
-  {
-    role: "Generative AI",
-    duration: {
-      start: "Oct, 2023",
-      end: "Apr, 2023",
-    },
-    skills: [
-      "python",
-      "transformers",
-      "stable diffusion",
-      "text-to-image generation",
-    ],
-    company: "BVCOE, New Delhi",
-    desc: "Conducted research on various text-to-image generation models, exploring their potential impact and applications across different fields.",
-  },
-  {
-    role: "Tech Head",
-    duration: {
-      start: "Oct 2023",
-      end: "May 2024",
-    },
-    skills: [
-      "HTML5",
-      "Bootstrap",
-      "CSS",
-      "JavaScript",
-      "GitHub",
-      "Git",
-      "Leadership",
-    ],
-    company: "NIDUS BVP",
-    desc: "Led a 6-member team to develop a responsive website for the college society.",
-  },
+  // {
+  //   role: "Generative AI",
+  //   duration: {
+  //     start: "Oct, 2023",
+  //     end: "Apr, 2023",
+  //   },
+  //   skills: [
+  //     "python",
+  //     "transformers",
+  //     "stable diffusion",
+  //     "text-to-image generation",
+  //   ],
+  //   company: "BVCOE, New Delhi",
+  //   desc: "Conducted research on various text-to-image generation models, exploring their potential impact and applications across different fields.",
+  // },
   {
     role: "Softech Head",
     duration: {
@@ -111,6 +93,25 @@ const experience = [
     company: "BVP-ISTE",
     desc: "Successfully organized a 5-day online AI/ML Bootcamp with a team of 8. Developed and led the team for a website for the hackathon Hack The Crisis 3.0 oraganized by BVP-ISTE",
   },
+  {
+    role: "Tech Head",
+    duration: {
+      start: "Oct 2023",
+      end: "May 2024",
+    },
+    skills: [
+      "HTML5",
+      "Bootstrap",
+      "CSS",
+      "JavaScript",
+      "GitHub",
+      "Git",
+      "Leadership",
+    ],
+    company: "NIDUS BVP",
+    desc: "Led a 6-member team to develop a responsive website for the college society.",
+  },
+  
 ];
 
 const skills = [
@@ -139,11 +140,27 @@ const skills = [
     img: "",
   },
   {
+    name: "Next.js",
+    img: "",
+  },
+  {
     name: "git",
     img: ""
   },
   {
     name: "github",
+    img: ""
+  },
+  {
+    name: "express",
+    img: ""
+  },
+  {
+    name: "mongodb",
+    img: ""
+  },
+  {
+    name: "jwt",
     img: ""
   },
   {
@@ -174,12 +191,30 @@ const skills = [
 
 const myProjects = [
   {
+    name: "PromptNagar",
+    duration: {
+      start: "Nov 2024",
+      end: "Dec 2024"
+    },
+    tags: ["Next.js", "next-auth", "OAuth", "full-stack"],
+    desc: "Developed a web app using Next.js 14 that allows users to sign-in with Google OAuth and share helpful prompts. Implemented CRUD operations and a responsive user-friendly interface."
+  },
+  {
+    name: "ChalChitra",
+    duration: {
+      start: "Jul 2024",
+      end: "Present"
+    },
+    tags: ["ReactJS", "express", "mongodb", "jwt", "full-stack"],
+    desc: "Developed a web app using Next.js 14 that allows users to sign-in with Google OAuth and share helpful prompts. Implemented CRUD operations and a responsive user-friendly interface."
+  },
+  {
     name: "Redux Toolkit Todo",
     duration: {
       start: "July, 2024",
       end: "July, 2024",
     },
-    tags: ["React JS", "Vite", "redux", "redux-toolkit", "tailwind CSS"],
+    tags: ["ReactJS", "Vite", "redux", "redux-toolkit", "tailwind CSS"],
     desc: "Developed a to-do web app using Vite and ReactJS, leveraging Redux Toolkit for state management. The web app allows users to add, remove, and update tasks efficiently.",
   },
   {
@@ -205,7 +240,7 @@ const myProjects = [
       start: "Feb 2024",
       end: "Feb 2024",
     },
-    tags: ["React Js", "Vite", "Tailwind CSS"],
+    tags: ["ReactJs", "Vite", "Tailwind CSS"],
     desc: "Built a React Todo app with the context API and client-side local storage persistence using the Vite framework.",
   },
   {
@@ -230,6 +265,15 @@ const myProjects = [
 
 const top3WebDevProjects = [
   {
+    name: "PromptNagar",
+    duration: {
+      start: "Nov 2024",
+      end: "Dec 2024"
+    },
+    tags: ["Next.js", "next-auth", "OAuth", "full-stack"],
+    desc: "Developed a web app using Next.js 14 that allows users to sign-in with Google OAuth and share helpful prompts. Implemented CRUD operations and a responsive user-friendly interface."
+  },
+  {
     name: "Redux Toolkit Todo",
     duration: {
       start: "July, 2024",
@@ -247,15 +291,15 @@ const top3WebDevProjects = [
     tags: ["React Js", "Vite", "Tailwind CSS"],
     desc: "Built a React Todo app with the context API and client-side local storage persistence using the Vite framework.",
   },
-  {
-    name: "MedUnited",
-    duration: {
-      start: "July 2023",
-      end: "July 2023",
-    },
-    tags: ["HTML", "CSS", "JavaScript", "tailwind CSS", "fetch API"],
-    desc: "Developed MedUnited: a healthcare platform prototype with real-time hospital searches, facility data display, and an integrated online medicine shop, enhancing accessibility and convenience for users.",
-  },  
+  // {
+  //   name: "MedUnited",
+  //   duration: {
+  //     start: "July 2023",
+  //     end: "July 2023",
+  //   },
+  //   tags: ["HTML", "CSS", "JavaScript", "tailwind CSS", "fetch API"],
+  //   desc: "Developed MedUnited: a healthcare platform prototype with real-time hospital searches, facility data display, and an integrated online medicine shop, enhancing accessibility and convenience for users.",
+  // },  
 ]
 
 const education = [

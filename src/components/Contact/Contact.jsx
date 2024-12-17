@@ -121,7 +121,7 @@ const Contact = () => {
           >
             <span>
               Submit Message
-              <i class="fa-solid fa-paper-plane ml-2"></i>
+              <i className="fa-solid fa-paper-plane ml-2"></i>
             </span>
           </Button>
 

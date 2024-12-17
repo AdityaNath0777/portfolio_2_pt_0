@@ -5,7 +5,7 @@ const ResumeHeader = () => {
     <header className="text-center">
       <h1>Aditya Mishra</h1>
       <hr />
-      <h2>Front End Developer</h2>
+      <h2>Full-Stack Developer</h2>
       <hr />
     </header>
   );
