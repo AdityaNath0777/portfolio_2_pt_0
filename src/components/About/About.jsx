@@ -5,24 +5,30 @@ import { Bio } from "../../constants";
 import { myPic } from "../../assets";
 import { NavHashLink } from "react-router-hash-link";
 import "./about.css";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
 const About = () => {
+  const handleScrollClick = (el) => {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section id="about" className="min-h-screen">
-      <div className="about-container w-full grid grid-cols-2 gap-2 place-items-center justify-items-center p-4">
-        <div className="about-left w-full"   data-aos='fade-right' data-aos-duration='1000' >
-          <h1
-            className="about-heading pt-20 text-wrap font-extrabold text-slate-100"
-          >
-            NAMASTE,
+      <div className="about-container w-full grid grid-cols-6 gap-2 place-items-center justify-items-center p-4">
+        <div
+          className="about-left w-full col-span-4"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <h1 className="about-heading uppercase text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl  pt-20 text-wrap font-extrabold text-slate-100">
+            <span>NAMAST&eacute;,</span>
             <br />
             I'M {`${Bio.firstName.toUpperCase()} ${Bio.lastName.toUpperCase()}`}
           </h1>
-          <h2 className="about-role text-sky-500 font-bold my-3">
-            {Bio.roles[0]}
+          <h2 className="about-role text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl text-sky-500 font-bold my-3">
+            {Bio.primaryRole}
           </h2>
-          <p className="about-desc mt-8 text-slate-500 text-base font-semibold">
+          <p className="about-desc mt-8 text-slate-300/90 text-xs sm:text-sm lg:text-base font-medium">
             {Bio.description}
           </p>
 
@@ -38,9 +44,7 @@ const About = () => {
             <NavHashLink
               to={"#contact"}
               className=""
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "start" })
-              }
+              scroll={handleScrollClick}
             >
               <Button
                 className="about-contact-btn w-full border-4 font-semibold border-sky-500 rounded-tl-3xl rounded-br-3xl h-20"
@@ -53,20 +57,22 @@ const About = () => {
           </div>
 
           <div className="mt-10 px-6">
-            <SocialLinks prop = {Bio} />
+            <SocialLinks prop={Bio} />
           </div>
-
-
         </div>
 
-        <div className="about-right w-full" data-aos='fade-left' data-aos-duration='1000'>
+        {/* <div
+          className="about-right w-full flex justify-center items-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          style={{ filter: "drop-shadow(4px 4px 6px white)" }}
+        >
           <img
             src={myPic}
             alt="my picture"
-            className="pr-4"
-            style={{ width: "70%", marginLeft: "auto" }}
+            className="mr-4 profile-pic rounded-lg w-[70%]"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

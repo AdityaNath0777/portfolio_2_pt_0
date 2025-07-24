@@ -21,7 +21,8 @@ function App() {
   );
   return (
     <div className="w-full min-h-screen">
-      <RouterProvider  router={router} />
+      <RouterProvider router={router}>
+      </RouterProvider>
     </div>
   );
 }

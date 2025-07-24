@@ -7,3 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.active-nav-link {
+  color: blue;
+  font-weight: bold;
+  border-bottom: 2px solid blue;
+}

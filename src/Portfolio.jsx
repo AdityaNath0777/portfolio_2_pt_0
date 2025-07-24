@@ -6,15 +6,16 @@ import {
   Navbar,
   Projects,
   Skills,
-  Work,
+  WorkExperience,
+  Volunteer,
 } from "./components/index";
-import Aos from "aos";  
-import 'aos/dist/aos.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Portfolio = ({ setRenderResume }) => {
   useEffect(() => {
-    Aos.init()
-  }, [])
+    Aos.init();
+  }, []);
   return (
     <div className="w-full main-app">
       <div className="left-app">
@@ -23,9 +24,10 @@ const Portfolio = ({ setRenderResume }) => {
       <div className="right-app">
         <Header setRenderResume={setRenderResume} />
         <main>
-          <Work />
-          <Skills />
+          <WorkExperience />
           <Projects />
+          <Skills />
+          <Volunteer />
           <Contact />
         </main>
         <Footer />

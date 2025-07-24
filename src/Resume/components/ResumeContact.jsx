@@ -11,7 +11,7 @@ const ResumeContact = () => {
     <section id="contact-section">
       <h2>CONTACT</h2>
       {/* <!--contact information including social media--> */}
-      <div className="contacts-container w-1/2 mx-auto">
+      <div className="contacts-container md:w-3/4 mx-auto">
         <p className="text-left">
           <i class="fa-regular fa-envelope" aria-hidden="true"></i>
           <Link to="#" onClick={(e) => handleMail(e, Bio.mail)}>
