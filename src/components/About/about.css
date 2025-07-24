@@ -23,3 +23,7 @@
   border-color: white;
   color: white;
 }
+
+.profile-pic {
+  filter: drop-shadow(2px 4px 16px rgba(83, 208, 250, 0.852));
+}

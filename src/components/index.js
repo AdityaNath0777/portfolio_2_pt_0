@@ -4,7 +4,8 @@ import Footer from "./Footer/Footer";
 import Contact from "./Contact/Contact";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
-import Work from "./Work/Work";
+import WorkExperience from "./Work/Work";
+import Volunteer from './Work/Volunteer'
 import About from "./About/About";
 import Button from "./Button";
 import SocialLinks from "./socialLinks/SocialLinks";
@@ -15,7 +16,8 @@ export {
   Contact,
   Skills,
   Projects,
-  Work,
+  WorkExperience,
+  Volunteer,
   About,
   Button,
   SocialLinks,

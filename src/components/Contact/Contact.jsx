@@ -71,21 +71,21 @@ const Contact = () => {
 
   return (
     <section id="contact" className="min-h-screen px-6">
-      <h2 className="text-4xl font-bold text-slate-900 py-10">CONTACT</h2>
+      <h2 className="text-4xl uppercase font-bold text-slate-900 py-10">CONTACT</h2>
       <div className="contact-container">
-        <div
+        {/* <div
           data-aos="zoom-out"
           data-aos-anchor-placement="top-bottom"
           data-aos-duration="1000"
           className="w-full"
         >
           <img src={myPic} alt="contact img" className="w-3/5 mx-auto" />
-        </div>
+        </div> */}
         <form
           onSubmit={handleContactSumit}
           data-aos="zoom-out"
           data-aos-duration="1000"
-          className="grid grid-cols-1 gap-4 w-11/12  mx-auto contact-form"
+          className="grid grid-cols-1 col-span-2 gap-4 w-1/2  mx-auto contact-form"
         >
           <input
             type="text"
