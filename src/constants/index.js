@@ -51,7 +51,7 @@ const experience = {
       role: "Full Stack Developer Intern",
       duration: {
         start: "Feb 2025",
-        end: "present",
+        end: "Jun 2025",
       },
       skills: [
         "ReactJs",
@@ -86,7 +86,7 @@ const experience = {
       role: "Vice Chaiperson",
       duration: {
         start: "May 2024",
-        end: "present",
+        end: "May 2025",
       },
       skills: [
         "HTML5",
